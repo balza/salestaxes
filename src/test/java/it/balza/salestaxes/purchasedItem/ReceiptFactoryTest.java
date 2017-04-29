@@ -43,9 +43,9 @@ public class ReceiptFactoryTest {
     Assert.assertEquals("book", receipt.getPurchasedItems().get(0).getDescription());
     Assert.assertEquals(12.49, receipt.getPurchasedItems().get(0).getTaxedPrice(), 0.0001);
     Assert.assertEquals("music CD", receipt.getPurchasedItems().get(1).getDescription());
-    Assert.assertEquals(16.49, receipt.getPurchasedItems().get(0).getTaxedPrice(), 0.0001);
+    Assert.assertEquals(16.49, receipt.getPurchasedItems().get(1).getTaxedPrice(), 0.0001);
     Assert.assertEquals("chocolate bar", receipt.getPurchasedItems().get(2).getDescription());
-    Assert.assertEquals(0.85, receipt.getPurchasedItems().get(0).getTaxedPrice(), 0.0001);
+    Assert.assertEquals(0.85, receipt.getPurchasedItems().get(2).getTaxedPrice(), 0.0001);
     Assert.assertEquals(1.50d, receipt.getSalesTaxes(), 0.01d);
     Assert.assertEquals(29.83d, receipt.getTotal(), 0.0001d);
   }

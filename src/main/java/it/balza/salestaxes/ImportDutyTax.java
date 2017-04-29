@@ -7,7 +7,8 @@ public class ImportDutyTax implements Tax {
   private static final double TAX = 0.05;
 
   @Override
+
   public double calculate(double price) {
-    return price * TAX;
+    return Math.round(price * TAX * 20.0) / 20.0;
   }
 }

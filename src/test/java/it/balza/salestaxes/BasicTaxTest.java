@@ -11,8 +11,8 @@ public class BasicTaxTest {
   @Test
   public void calculate() throws Exception {
     BasicTax basicTax = new BasicTax();
-    double taxedPrice = basicTax.calculate(100);
-    Assert.assertEquals(10, taxedPrice, 0.1);
+    double taxedPrice = basicTax.calculate(14.99);
+    Assert.assertEquals(16.49, 14.99 + taxedPrice, 0.0001);
   }
 
 }
