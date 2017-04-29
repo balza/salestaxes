@@ -41,4 +41,5 @@
 36.3 Modified PurchasedItemFactory added invariants on taxOnEachItem
 36.4 Some problems with rounding strategy, added the Input3 test case in receiptFactory
 36.5 Realized that the rounding strategy is part of the tax Strategy, refactor the taxes strategies
+36.6 Added a test in ImportDutyTax and discovered that the rounding strategy are wrong
 

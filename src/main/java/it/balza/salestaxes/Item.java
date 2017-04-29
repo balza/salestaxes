@@ -1,7 +1,5 @@
 package it.balza.salestaxes;
 
-import it.balza.salestaxes.Tax;
-
 /**
  * Created by paolo on 28/04/17.
  */

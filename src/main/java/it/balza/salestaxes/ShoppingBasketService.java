@@ -11,8 +11,11 @@ import java.util.List;
 public class ShoppingBasketService {
 
   Receipt purchase(List<Item> shoppingBasketItems) {
-    Receipt receipt = new ReceiptFactory().create(shoppingBasketItems);
-    return receipt;
+    return new ReceiptFactory().create(shoppingBasketItems);
+  }
+
+  public void print(Receipt receipt){
+    System.out.println(receipt.toString());
   }
 
 }

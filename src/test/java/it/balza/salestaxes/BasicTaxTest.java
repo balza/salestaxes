@@ -1,6 +1,5 @@
 package it.balza.salestaxes;
 
-import it.balza.salestaxes.BasicTax;
 import org.junit.Assert;
 import org.junit.Test;
 

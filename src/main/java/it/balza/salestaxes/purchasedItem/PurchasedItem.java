@@ -34,4 +34,10 @@ class PurchasedItem {
   protected void setTaxOnItem(double taxOnItem) {
     this.taxOnItem = taxOnItem;
   }
+
+  @Override
+  public String toString() {
+    return
+        description + ": " + taxedPrice + "\n";
+  }
 }

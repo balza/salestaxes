@@ -23,11 +23,11 @@ class PurchasedItemFactory {
     return purchasedItem;
   }
 
-  private double round(double num){
+  private double round(double num) {
     return Math.round(num * 200.0) / 200.0;
   }
 
-  private double roundTax(double num){
+  private double roundTax(double num) {
     return Math.round(num * 20.0) / 20.0;
   }
 

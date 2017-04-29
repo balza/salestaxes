@@ -27,7 +27,7 @@ public class ImportDutyTaxTest {
   public void calculateImport2() throws Exception {
     ImportDutyTax importDutyTax = new ImportDutyTax();
     double taxedPrice = importDutyTax.calculate(11.25);
-    Assert.assertEquals(11.85, 11.25  + taxedPrice, 0.0001);
+    Assert.assertEquals(11.85, 11.25 + taxedPrice, 0.0001);
   }
 
 }

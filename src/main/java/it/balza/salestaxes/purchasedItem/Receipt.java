@@ -1,8 +1,5 @@
 package it.balza.salestaxes.purchasedItem;
 
-import it.balza.salestaxes.Item;
-import it.balza.salestaxes.purchasedItem.PurchasedItem;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,5 +38,13 @@ public class Receipt {
 
   protected void setTotal(double total) {
     this.total = total;
+  }
+
+  @Override
+  public String toString() {
+    return
+        purchasedItems +
+        "\nSales Taxes: " + salesTaxes +
+        "\nTotal: " + total;
   }
 }
