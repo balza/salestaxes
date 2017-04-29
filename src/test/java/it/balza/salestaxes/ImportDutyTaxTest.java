@@ -23,4 +23,11 @@ public class ImportDutyTaxTest {
     Assert.assertEquals(32.19, 27.99 + basicTax.calculate(27.99) + taxedPrice, 0.0001);
   }
 
+  @Test
+  public void calculateImport2() throws Exception {
+    ImportDutyTax importDutyTax = new ImportDutyTax();
+    double taxedPrice = importDutyTax.calculate(11.25);
+    Assert.assertEquals(11.85, 11.25  + taxedPrice, 0.0001);
+  }
+
 }

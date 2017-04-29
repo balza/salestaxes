@@ -9,6 +9,6 @@ public class ImportDutyTax implements Tax {
   @Override
 
   public double calculate(double price) {
-    return Math.round(price * TAX * 20.0) / 20.0;
+    return Math.ceil(price * TAX * 20.0) / 20.0;
   }
 }
