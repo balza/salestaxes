@@ -34,4 +34,10 @@
 32. Added to PurchasedItemFactoryTest the createImportedBottleOfPerfume, red!!! I didn't understand the requirement! The ImportDutyTax is additive!
 33. I don't know if use an array of taxes in the Item class or to add a Imported flag. The second option is simpler, so I choose to delete Import Duty tax class and add a flag imported to Item. Refactor.
 34. The Taxes strategy seems too complicated, I'll refactor later <--!!!
-35. I missed the rounding requirement of taxes, so the createImportedBottleOfPerfume test is red
+35. I missed the rounding requirement of taxes, so the createImportedBottleOfPerfume test is red, fixed in PurchasedItemFactory
+36. The SalesTaxesServiceTests still red due to the wrong value of calculate sales taxes, this need some work
+36.1 Refactor of Receipt contains PurchasedItem not Item, the construction of a Receipt is a complex task that need a Factory: ReceiptFactory and the consrtructor of Receipt shouldn't be visible outside the package
+36.2 Refactor PurchasedItem to hold the tax on each item value
+36.3 Modified PurchasedItemFactory added invariants on taxOnEachItem
+36.4 Some problems with rounding strategy, added the Input3 test case in receiptFactory
+

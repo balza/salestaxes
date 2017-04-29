@@ -11,14 +11,20 @@ class PurchasedItemFactory {
   PurchasedItem create(Item item) {
     PurchasedItem purchasedItem = new PurchasedItem();
     purchasedItem.setDescription(item.getDescription());
-    double taxedPrice = item.getPrice() + item.getTax().calculate(item.getPrice());
+    double taxOnItem = item.getTax().calculate(item.getPrice());
+    double taxedPrice = item.getPrice() + taxOnItem;
     if (item.isImported()) {
       ImportDutyTax importDutyTax = new ImportDutyTax();
-      taxedPrice = taxedPrice + importDutyTax.calculate(item.getPrice());
+      taxedPrice += importDutyTax.calculate(item.getPrice());
+      taxOnItem += importDutyTax.calculate(item.getPrice());
     }
-    double roundedTaxedPrice = Math.round(taxedPrice * 20.0) / 20.0;
-    purchasedItem.setTaxedPrice(roundedTaxedPrice);
+    purchasedItem.setTaxOnItem(round(taxOnItem));
+    purchasedItem.setTaxedPrice(round(taxedPrice));
     return purchasedItem;
+  }
+
+  private double round(double num){
+    return Math.round(num * 20.0) / 20.0;
   }
 
 }

@@ -1,5 +1,6 @@
 package it.balza.salestaxes;
 
+import it.balza.salestaxes.purchasedItem.Receipt;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,6 +19,7 @@ public class SalesTaxesServiceTest {
     shoppingBasketService = new ShoppingBasketService();
   }
 
+  //TODO delete?
   @Test
   public void purchaseInput1() throws Exception {
     List<Item> purchasedItems = new ArrayList<Item>();

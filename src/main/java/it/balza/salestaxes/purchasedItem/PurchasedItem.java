@@ -9,6 +9,8 @@ class PurchasedItem {
 
   private double taxedPrice;
 
+  private double taxOnItem;
+
   public String getDescription() {
     return description;
   }
@@ -23,5 +25,13 @@ class PurchasedItem {
 
   protected void setTaxedPrice(double taxedPrice) {
     this.taxedPrice = taxedPrice;
+  }
+
+  public double getTaxOnItem() {
+    return taxOnItem;
+  }
+
+  protected void setTaxOnItem(double taxOnItem) {
+    this.taxOnItem = taxOnItem;
   }
 }

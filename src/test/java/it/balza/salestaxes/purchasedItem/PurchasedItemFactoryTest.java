@@ -27,6 +27,7 @@ public class PurchasedItemFactoryTest {
     Assert.assertNotNull(purchasedItem);
     Assert.assertEquals("book", purchasedItem.getDescription());
     Assert.assertEquals(12.49, purchasedItem.getTaxedPrice(), 0.1);
+    Assert.assertEquals(0, purchasedItem.getTaxOnItem(), 0.1);
   }
 
   @Test
@@ -38,6 +39,7 @@ public class PurchasedItemFactoryTest {
     Assert.assertNotNull(purchasedItem);
     Assert.assertEquals("music CD", purchasedItem.getDescription());
     Assert.assertEquals(16.49, purchasedItem.getTaxedPrice(), 0.1);
+    Assert.assertEquals(1.5, purchasedItem.getTaxOnItem(), 0.0001);
   }
 
   @Test
@@ -50,6 +52,7 @@ public class PurchasedItemFactoryTest {
     Assert.assertNotNull(purchasedItem);
     Assert.assertEquals("imported box of chocolates", purchasedItem.getDescription());
     Assert.assertEquals(10.50, purchasedItem.getTaxedPrice(), 0.1);
+    Assert.assertEquals(0.5, purchasedItem.getTaxOnItem(), 0.0001);
   }
 
   @Test
@@ -62,6 +65,7 @@ public class PurchasedItemFactoryTest {
     Assert.assertNotNull(purchasedItem);
     Assert.assertEquals("imported bottle of perfume", purchasedItem.getDescription());
     Assert.assertEquals(54.65, purchasedItem.getTaxedPrice(), 0.0001);
+    Assert.assertEquals(7.15, purchasedItem.getTaxOnItem(), 0.0001);
   }
 
 }

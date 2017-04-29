@@ -1,5 +1,8 @@
 package it.balza.salestaxes;
 
+import it.balza.salestaxes.purchasedItem.Receipt;
+import it.balza.salestaxes.purchasedItem.ReceiptFactory;
+
 import java.util.List;
 
 /**
@@ -7,8 +10,9 @@ import java.util.List;
  */
 public class ShoppingBasketService {
 
-  Receipt purchase(List<Item> purchasedItems) {
-    return new Receipt(purchasedItems);
+  Receipt purchase(List<Item> shoppingBasketItems) {
+    Receipt receipt = new ReceiptFactory().create(shoppingBasketItems);
+    return receipt;
   }
 
 }
