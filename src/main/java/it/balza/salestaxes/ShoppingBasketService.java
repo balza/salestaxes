@@ -14,7 +14,7 @@ class ShoppingBasketService {
     return new ReceiptFactory().create(shoppingBasketItems);
   }
 
-  void print(Receipt receipt){
+  void print(Receipt receipt) {
     System.out.println(receipt.toString());
   }
 

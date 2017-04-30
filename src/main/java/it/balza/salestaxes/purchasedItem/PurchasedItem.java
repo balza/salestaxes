@@ -18,35 +18,31 @@ class PurchasedItem {
 
   private double taxOnItem;
 
-  public int getQuantity() {
-    return quantity;
-  }
-
-  public void setQuantity(int quantity) {
+  void setQuantity(int quantity) {
     this.quantity = quantity;
   }
 
-  public String getDescription() {
+  String getDescription() {
     return description;
   }
 
-  protected void setDescription(String description) {
+  void setDescription(String description) {
     this.description = description;
   }
 
-  public double getTaxedPrice() {
+  double getTaxedPrice() {
     return taxedPrice;
   }
 
-  protected void setTaxedPrice(double taxedPrice) {
+  void setTaxedPrice(double taxedPrice) {
     this.taxedPrice = taxedPrice;
   }
 
-  public double getTaxOnItem() {
+  double getTaxOnItem() {
     return taxOnItem;
   }
 
-  protected void setTaxOnItem(double taxOnItem) {
+  void setTaxOnItem(double taxOnItem) {
     this.taxOnItem = taxOnItem;
   }
 

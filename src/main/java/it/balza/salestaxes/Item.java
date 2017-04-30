@@ -11,7 +11,7 @@ public class Item {
 
   private double price;
 
-  private Tax tax;
+  private final Tax tax;
 
   private boolean imported;
 

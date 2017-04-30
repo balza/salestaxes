@@ -3,8 +3,6 @@ package it.balza.salestaxes.purchasedItem;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by paolo on 30/04/17.
  */

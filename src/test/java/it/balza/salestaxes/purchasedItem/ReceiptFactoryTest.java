@@ -23,7 +23,7 @@ public class ReceiptFactoryTest {
 
   @Test
   public void createInput1() throws Exception {
-    List<Item> shoppingBasketItems = new ArrayList<Item>();
+    ArrayList<Item> shoppingBasketItems = new ArrayList<>();
     Item book = new Item(new ExemptTax());
     book.setQuantity(1);
     book.setDescription("book");
@@ -53,7 +53,7 @@ public class ReceiptFactoryTest {
 
   @Test
   public void createInput2() throws Exception {
-    List<Item> shoppingBasketItems = new ArrayList<Item>();
+    List<Item> shoppingBasketItems = new ArrayList<>();
     Item importedBoxOfChocolates = new Item(new ExemptTax());
     importedBoxOfChocolates.setDescription("imported box of chocolates");
     importedBoxOfChocolates.setPrice(10.00);
@@ -78,7 +78,7 @@ public class ReceiptFactoryTest {
 
   @Test
   public void createInput3() throws Exception {
-    List<Item> shoppingBasketItems = new ArrayList<Item>();
+    List<Item> shoppingBasketItems = new ArrayList<>();
     Item importedBottleOfPerfume = new Item(new BasicTax());
     importedBottleOfPerfume.setDescription("imported bottle of perfume");
     importedBottleOfPerfume.setImported(true);
