@@ -19,7 +19,7 @@ public class ReceiptFactory {
       salesTaxes += purchasedItem.getTaxOnItem();
       receipt.getPurchasedItems().add(purchasedItem);
     }
-    receipt.setSalesTaxes(salesTaxes);
+    receipt.setSalesTaxes(Math.round(salesTaxes* 100.0) / 100.0);
     receipt.setTotal(Math.round(total * 100.0) / 100.0);
     return receipt;
   }

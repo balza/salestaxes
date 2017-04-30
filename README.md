@@ -42,4 +42,5 @@
 36.4 Some problems with rounding strategy, added the Input3 test case in receiptFactory
 36.5 Realized that the rounding strategy is part of the tax Strategy, refactor the taxes strategies
 36.6 Added a test in ImportDutyTax and discovered that the rounding strategy are wrong
+37. Added toString method to print the Receipts, but there are something wrong in roundig and in number of items. I need a different structure to contain PurchasedItems
 
