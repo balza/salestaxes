@@ -19,7 +19,7 @@ public class Receipt {
   private double total;
 
   protected Receipt() {
-    purchasedItems = new ArrayList<PurchasedItem>();
+    purchasedItems = new ReceiptItems();
     salesTaxes = 0;
     total = 0;
   }

@@ -57,6 +57,6 @@ class PurchasedItem {
     decimalFormat.applyPattern("0.00");
     decimalFormat.setRoundingMode(RoundingMode.FLOOR);
     return
-        quantity + " " + description + ": " + decimalFormat.format(taxedPrice) + "\n";
+        quantity + " " + description + ": " + decimalFormat.format(taxedPrice);
   }
 }

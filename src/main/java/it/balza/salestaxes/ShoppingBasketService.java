@@ -8,13 +8,13 @@ import java.util.List;
 /**
  * Created by paolo on 28/04/17.
  */
-public class ShoppingBasketService {
+class ShoppingBasketService {
 
   Receipt purchase(List<Item> shoppingBasketItems) {
     return new ReceiptFactory().create(shoppingBasketItems);
   }
 
-  public void print(Receipt receipt){
+  void print(Receipt receipt){
     System.out.println(receipt.toString());
   }
 
