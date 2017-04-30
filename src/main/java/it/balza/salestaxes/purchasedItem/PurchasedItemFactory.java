@@ -10,25 +10,18 @@ class PurchasedItemFactory {
 
   PurchasedItem create(Item item) {
     PurchasedItem purchasedItem = new PurchasedItem();
-    purchasedItem.setDescription(item.getDescription());
     double taxOnItem = item.getTax().calculate(item.getPrice());
     double taxedPrice = item.getPrice() + taxOnItem;
     if (item.isImported()) {
       ImportDutyTax importDutyTax = new ImportDutyTax();
-      taxedPrice += importDutyTax.calculate(item.getPrice());
       taxOnItem += importDutyTax.calculate(item.getPrice());
+      taxedPrice += importDutyTax.calculate(item.getPrice());
     }
-    purchasedItem.setTaxOnItem(taxOnItem);
-    purchasedItem.setTaxedPrice(taxedPrice);
+    purchasedItem.setDescription(item.getDescription());
+    purchasedItem.setQuantity(item.getQuantity());
+    purchasedItem.setTaxOnItem(item.getQuantity() * taxOnItem);
+    purchasedItem.setTaxedPrice(item.getQuantity() * taxedPrice);
     return purchasedItem;
-  }
-
-  private double round(double num) {
-    return Math.round(num * 200.0) / 200.0;
-  }
-
-  private double roundTax(double num) {
-    return Math.round(num * 20.0) / 20.0;
   }
 
 }

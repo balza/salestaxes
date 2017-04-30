@@ -5,6 +5,8 @@ package it.balza.salestaxes;
  */
 public class Item {
 
+  private int quantity;
+
   private String description;
 
   private double price;
@@ -15,6 +17,14 @@ public class Item {
 
   public Item(Tax tax) {
     this.tax = tax;
+  }
+
+  public int getQuantity() {
+    return quantity;
+  }
+
+  public void setQuantity(int quantity) {
+    this.quantity = quantity;
   }
 
   public void setDescription(String description) {

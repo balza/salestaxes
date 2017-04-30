@@ -21,6 +21,7 @@ public class PurchasedItemFactoryTest {
   @Test
   public void createBook() throws Exception {
     Item book = new Item(new ExemptTax());
+    book.setQuantity(1);
     book.setDescription("book");
     book.setPrice(12.49);
     PurchasedItem purchasedItem = purchasedItemFactory.create(book);
@@ -33,6 +34,7 @@ public class PurchasedItemFactoryTest {
   @Test
   public void createMusicCD() throws Exception {
     Item music = new Item(new BasicTax());
+    music.setQuantity(1);
     music.setDescription("music CD");
     music.setPrice(14.99);
     PurchasedItem purchasedItem = purchasedItemFactory.create(music);
@@ -45,6 +47,7 @@ public class PurchasedItemFactoryTest {
   @Test
   public void createImportedBoxOfChocolates() throws Exception {
     Item importedChocolates = new Item(new ExemptTax());
+    importedChocolates.setQuantity(1);
     importedChocolates.setImported(true);
     importedChocolates.setDescription("imported box of chocolates");
     importedChocolates.setPrice(10.00);
@@ -58,14 +61,29 @@ public class PurchasedItemFactoryTest {
   @Test
   public void createImportedBottleOfPerfume() throws Exception {
     Item importedPerfume = new Item(new BasicTax());
+    importedPerfume.setQuantity(1);
     importedPerfume.setDescription("imported bottle of perfume");
     importedPerfume.setImported(true);
     importedPerfume.setPrice(47.50);
     PurchasedItem purchasedItem = purchasedItemFactory.create(importedPerfume);
     Assert.assertNotNull(purchasedItem);
     Assert.assertEquals("imported bottle of perfume", purchasedItem.getDescription());
-    Assert.assertEquals(54.65, purchasedItem.getTaxedPrice(), 0.0001);
     Assert.assertEquals(7.15, purchasedItem.getTaxOnItem(), 0.0001);
+    Assert.assertEquals(54.65, purchasedItem.getTaxedPrice(), 0.0001);
+  }
+
+  @Test
+  public void create2ImportedBottleOfPerfume() throws Exception {
+    Item importedPerfume = new Item(new BasicTax());
+    importedPerfume.setQuantity(2);
+    importedPerfume.setDescription("imported bottle of perfume");
+    importedPerfume.setImported(true);
+    importedPerfume.setPrice(47.50);
+    PurchasedItem purchasedItem = purchasedItemFactory.create(importedPerfume);
+    Assert.assertNotNull(purchasedItem);
+    Assert.assertEquals("imported bottle of perfume", purchasedItem.getDescription());
+    Assert.assertEquals(7.15 * 2, purchasedItem.getTaxOnItem(), 0.0001);
+    Assert.assertEquals(54.65 * 2, purchasedItem.getTaxedPrice(), 0.0001);
   }
 
 }
