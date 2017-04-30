@@ -17,7 +17,7 @@ public class PurchasedItemTest {
     purchasedItem.setTaxOnItem(1.99);
     purchasedItem.setDescription("book");
     purchasedItem.setTaxedPrice(15.9999);
-    Assert.assertEquals("1 book: 15.99\n" , purchasedItem.toString());
+    Assert.assertEquals("1 book: 15.99" , purchasedItem.toString());
   }
 
   @Test
@@ -27,7 +27,7 @@ public class PurchasedItemTest {
     purchasedItem.setTaxOnItem(1.99);
     purchasedItem.setDescription("book");
     purchasedItem.setTaxedPrice(15.9);
-    Assert.assertEquals("1 book: 15.90\n" , purchasedItem.toString());
+    Assert.assertEquals("1 book: 15.90" , purchasedItem.toString());
   }
 
 }
